@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Practical labs for the WAD2 module",
   "main": "index.js",
-"scripts": {
+  "scripts": {
     "start": "babel-node index.js",
     "dev": "nodemon --exec npm start"
   },
@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "dotenv": "^17.3.1",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "uuid": "^13.0.0"
   }
 }
