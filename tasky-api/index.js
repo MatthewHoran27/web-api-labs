@@ -3,6 +3,7 @@ import express from 'express';
 import tasksRouter from './api/tasks';
 import cors from 'cors';
 import usersRouter from './api/users';
+import authenticate from './authenticate';
 
 import './db';
 
@@ -28,7 +29,7 @@ app.use(express.static('public'));
 
 app.use(express.json());
 
-app.use('/api/tasks', tasksRouter);
+app.use('/api/tasks', authenticate, tasksRouter);
 app.use('/api/users', usersRouter);
 
 app.use(errHandler);
